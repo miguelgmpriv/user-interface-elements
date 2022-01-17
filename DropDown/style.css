@@ -2,4 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul{
+    display: flex;
+}
+header{
+    padding-right: .25rem;
+}
+li{
+    list-style: none;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+li:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(44, 183, 244);
+    border-radius: 3rem;
+    cursor: pointer;
+}
+.navigation{
+    display: flex;
+    color: rgb(255, 255, 255);
+    background-color: rgb(44, 183, 244);
+    padding: .5rem 3rem .5rem 3rem;
 }
