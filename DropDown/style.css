@@ -3,13 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
+    
 }
-
+body{
+    background-color: rgb(44, 183, 244);
+}
 ul{
     display: flex;
 }
 header{
-    padding-right: .25rem;
+    padding-right: 3rem;
 }
 li{
     list-style: none;
@@ -25,7 +28,20 @@ li:hover{
 }
 .navigation{
     display: flex;
+    align-items: center;
     color: rgb(255, 255, 255);
     background-color: rgb(44, 183, 244);
     padding: .5rem 3rem .5rem 3rem;
+}
+.menu-div{
+    margin-top: 1rem;
+    padding: .5rem;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(255, 255, 255);
+    color: rgb(118, 119, 141);
+}
+.inner-menu{
+    display: grid;
 }
