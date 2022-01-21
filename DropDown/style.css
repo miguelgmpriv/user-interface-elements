@@ -34,14 +34,18 @@ li:hover{
     padding: .5rem 3rem .5rem 3rem;
 }
 .menu-div{
+    display: none;
+    border-radius: 1.5rem;
     margin-top: 1rem;
-    padding: .5rem;
+    padding: 2rem;
     position: absolute;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: rgb(255, 255, 255);
     color: rgb(118, 119, 141);
 }
 .inner-menu{
+    display: grid;
+}
+.active{
     display: grid;
 }

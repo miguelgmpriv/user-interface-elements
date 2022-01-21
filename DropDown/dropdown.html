@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Drop Down Menu</title>
 </head>
@@ -15,8 +15,9 @@
         </header>
         <ul>
             <li>Home</li>
-            <li>Products
-                <div class="menu-div">
+            <li data-menu>
+                <div data-item-link>Products</div>
+                <div class="menu-div" data-dropdown>
                     <ul class="inner-menu">
                         <li>Tellus Mauris</li>
                         <li>Id Donec</li>
@@ -38,7 +39,14 @@
                     </ul>
                 </div>
             </li>
-            <li>Services</li>
+            <li data-dropdown-button>Services</li>
+                <div class="menu-div">
+                    <ul class="inner-menu">
+                        <li>Printing</li>
+                        <li>Shipping</li>
+                        <li>Labeling</li>
+                    </ul>
+                </div>
             <li>Resources</li>
             <li>Support</li>
         </ul>
