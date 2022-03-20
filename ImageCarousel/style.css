@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+.carousel-container{
+    display: flex;
+    margin: auto;
+    width: 80vw;
+    position: relative;
+    align-items: center;
+}
+
+.carousel-slide{
+    width: 100%
+}
+.carousel-left, .carousel-right{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 1rem;
+    margin-top: -.5rem;
+    position:absolute;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: x-large;
+    border-radius: 5px;
+}
+.carousel-right{
+    right: 0;
+}
+.carousel-left:hover, .carousel-right:hover{
+    color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);        
+    
+}
