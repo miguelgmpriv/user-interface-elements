@@ -9,15 +9,25 @@
     <title>Image Carousel</title>
 </head>
 <body>
-    <div class="carousel-container">
-        <button class="carousel-left"> &#10094</button>
-        <div class="carousel-slide">
-                <img src="images/img_lights_wide.jpg" alt="" srcset="">
+    <div class="carousel-container" data-carousel>
+        <button class="carousel-left" data-carousel-button="prev"> &#10094</button>
+        <div class="carousel-slide active" data-carousel-slide="0">
+            <img src="images/img_lights_wide.jpg" alt="" srcset="">
         </div>
-        <button class="carousel-right">&#10095</button>
+        <div class="carousel-slide" data-carousel-slide="1">
+            <img src="images/img_mountains_wide.jpg" alt="" srcset="">
+        </div>
+        <div class="carousel-slide" data-carousel-slide="2">
+            <img src="images/img_nature_wide.jpg" alt="" srcset="">
+        </div>
+        <div class="carousel-slide" data-carousel-slide="3">
+            <img src="images/img_snow_wide.jpg" alt="" srcset="">
+        </div>
+        <button class="carousel-right" data-carousel-button="next">&#10095</button>
     </div>
     <div class="carousel-slide-picker">
 
     </div>
 </body>
+
 </html>
