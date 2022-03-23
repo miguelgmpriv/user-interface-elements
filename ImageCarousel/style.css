@@ -2,31 +2,42 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: white;
+    overflow: hidden;
 }
+
 img{
     width: 100%; 
     height: 100%;
-    object-fit: contain;
 }
 .carousel-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: auto;
-    height: 40vh;
-    width: 80vw;
+    height: 500px;
+    width: 1000px;
     position: relative;
 }
-.carousel-slide{
-    display: block;
+.carousel-slide{  
     width: 100%;
-    top: 0%;
+    opacity: 1;
+    transform: translate(-1000px);
+    align-self: center;
     position: absolute;
+    transition: transform 1200ms ease-in-out,
+    opacity 100ms ease-in-out;
+    z-index: -1;
+    
 }
 .active{
     z-index: 1;
-    transition: opacity 100ms ease-in-out 1s;
-    width: 100%
+    opacity: 1;
+    transform: translate(0px);
+    
+}
+.move-right{
+    transform: translate(1000px);
 }
 .carousel-left, .carousel-right{
     z-index: 5;

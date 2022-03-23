@@ -40,7 +40,8 @@ const prevSlide = (currentSlideNumber) => {
 
 const nextSlide = (currentSlideNumber) => {
   const nextSlideNumber = sliderCounter.next();
-  carouselSlides[currentSlideNumber].classList.toggle("active");
+
+  carouselSlides[currentSlideNumber].classList.add("move-right");
   return carouselSlides[nextSlideNumber].classList.toggle("active");
 };
 
