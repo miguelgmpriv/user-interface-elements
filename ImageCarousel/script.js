@@ -32,6 +32,14 @@ const counter = (slides) => {
 
 const sliderCounter = counter(carouselSlides);
 
+const removeClass = (slideToExempt) => {
+  carouselSlides.forEach((slide, index) => {
+    if (index != slideToExempt) {
+      slide.className = "carousel-slide";
+    }
+  });
+};
+
 const prevSlide = (currentSlideNumber) => {
   const prevSlideNumber = sliderCounter.prev();
   carouselSlides[currentSlideNumber].classList.toggle("active");
@@ -40,9 +48,12 @@ const prevSlide = (currentSlideNumber) => {
 
 const nextSlide = (currentSlideNumber) => {
   const nextSlideNumber = sliderCounter.next();
-
   carouselSlides[currentSlideNumber].classList.add("move-right");
-  return carouselSlides[nextSlideNumber].classList.toggle("active");
+  carouselSlides[nextSlideNumber].classList.toggle("active");
+  carouselSlides[nextSlideNumber].ontransitionend = () => {
+    removeClass(nextSlideNumber);
+    console.log(nextSlideNumber);
+  };
 };
 
 const displaySlide = (e) => {
